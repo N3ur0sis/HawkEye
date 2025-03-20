@@ -6,7 +6,7 @@ if [ ! -f agents.conf ]; then
     echo "127.0.0.1 9997" >> agents.conf
 fi
 
-# Lancer les agents en arrière-plan
+# Lance les agents en arrière-plan
 echo "Lancement de agent-nmap sur le port 9999..."
 ./bin/agent-nmap 9999 &
 PID_NMAP=$!
@@ -18,8 +18,6 @@ PID_NIKTO=$!
 echo "Lancement de agent-zap sur le port 9997..."
 ./bin/agent-zap 9997 &
 PID_ZAP=$!
-
-
 
 
 echo "Agents lancées."
